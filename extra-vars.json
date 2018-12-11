@@ -1,0 +1,32 @@
+{
+    "docker_version": "18.06",
+    "kube_verion": "v1.13.0",
+    "kube_basic_auth": true,
+    "kube_token_auth": true,
+    "kube_network_plugin": "calico",
+    "persistent_volumes_enabled": true,
+    "kubeconfig_localhost": true,
+    "kubectl_localhost": true,
+    "helm_enabled": true,
+    "local_volume_provisioner_enabled": true,
+    "local_volume_provisioner_namespace": "kube-system",
+    "local_volume_provisioner_storage_classes": [
+      {
+        "name": "local-ssd",
+        "host_dir": "/mnt/local-storage/ssd",
+        "mount_dir": "/mnt/local-storage/ssd"
+      }
+    ],
+    "ingress_nginx_enabled": true,
+    "ingress_nginx_host_network": false,
+    "ingress_nginx_namespace": "ingress",
+    "ingress_nginx_host_network": true,
+    "ingress_nginx_insecure_port": "80",
+    "ingress_nginx_secure_port": "443",
+    "cert_manager_enabled": true,
+    "cert_manager_namespace": "cert-manager",
+    "ingress_nginx_nodeselector": {
+        "node-role.kubernetes.io/master": ""
+    },
+    "kube_apiserver_node_port_range": "80-32767"
+}

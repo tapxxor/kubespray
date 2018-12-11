@@ -1,0 +1,17 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: apache
+  namespace: webservers
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: apache.mycluster.k8s
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: apache-service
+          servicePort: 80
