@@ -20,7 +20,11 @@ $ cd kubespray/
 $ vagrant up
 
 ```
-This command creates and configures guest machines according to the Vagrantfile. This Vagrantfile setups 4 vm. The first one with name *_control_* is used for the setup of k8s cluster with ansible. When ready control will have ansible 2.5 installed and kubestray repo downloaded at /vagrant/kubespray. The 3 other guest machines will be used as k8s nodes.
+This command creates and configures guest machines according to the Vagrantfile. 
+This Vagrantfile setups 4 vm. The first one with name *_control_* is used for the 
+setup of k8s cluster with ansible. When ready control will have ansible 2.5 installed 
+and kubestray repo downloaded at /vagrant/kubespray. The 3 other guest machines will 
+be used as k8s nodes.
 
 | node_name | address         | role             |
 |-----------|-----------------|------------------|
@@ -42,7 +46,7 @@ node3                     running (virtualbox)
 
 ## Configure setup
 
-Connec to *control* vm.
+Connect to *control* vm.
 ```console
 $ vagrant ssh control
 ```
