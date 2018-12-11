@@ -70,7 +70,7 @@ _inventory/mycluster/group_vars/k8s-cluster/k8s-cluster.yml_
 vagrant@control:/vagrant/kubespray$ cp ../extra-vars.json  .
 ```
 
-Ordet the k8s cluster setup
+Order the k8s cluster setup
 ```console
 vagrant@control:/vagrant/kubespray$ ansible-playbook -i inventory/mycluster/hosts.ini --extra-vars="@extra-vars.json" --become --become-user=root cluster.yml
 ```
@@ -81,7 +81,7 @@ vagrant@control:/vagrant$ sudo mv kubectl /usr/bin/
 vagrant@control:/vagrant/kubespray$ export KUBECONFIG=/vagrant/kubespray/inventory/mycluster/artifacts/admin.conf
 ```
 
-Order some kubectl commands"
+Order some kubectl commands:
 ```console
 vagrant@control:/vagrant$ kubectl get nodes
  NAME    STATUS   ROLES         AGE    VERSION
