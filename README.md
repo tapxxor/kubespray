@@ -18,7 +18,6 @@ $ vagrant plugin install vagrant-hostmanager
 ```console
 $ cd kubespray/
 $ vagrant up
-
 ```
 This command creates and configures guest machines according to the Vagrantfile. 
 This Vagrantfile setups 4 vm. The first one with name *_control_* is used for the 
@@ -43,7 +42,6 @@ node1                     running (virtualbox)
 node2                     running (virtualbox)
 node3                     running (virtualbox)
 ```
-
 ## Configure setup
 
 Connect to *control* vm.
@@ -83,7 +81,7 @@ vagrant@control:/vagrant$ sudo mv kubectl /usr/bin/
 vagrant@control:/vagrant/kubespray$ export KUBECONFIG=/vagrant/kubespray/inventory/mycluster/artifacts/admin.conf
 ```
 
-Order some kubectl commands
+Order some kubectl commands"
 ```console
 vagrant@control:/vagrant$ kubectl get nodes
  NAME    STATUS   ROLES         AGE    VERSION
@@ -105,9 +103,7 @@ vagrant@control:~$ kubectl get svc -n ingress
 NAME              TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)     AGE
 default-backend   ClusterIP   10.233.45.86   <none>        80/TCP      3h1m
 ingress-nginx     NodePort    10.233.3.141   <none>        80:80/TCP   110m
-
 ```
-
 Deploy an apache server at namespace `webservers`
 ```console
 vagrant@control:/vagrant$ kubectl create namespace webservers
