@@ -2,7 +2,7 @@
 
 With kubespray you can deploy a high available Production Ready Kubernetes Cluster. 
 
-Kubespray can be deployed on AWS, GCE, Azure, OpenStack, vSphere, Oracle Cloud Infrastructure (Experimental), or BaremetalInstructions to setup a k8s cluster with calico network plugin
+Kubespray can be deployed on AWS, GCE, Azure, OpenStack, vSphere, Oracle Cloud Infrastructure (Experimental), or Baremetal.
 
 With this guide you can setup a k8s cluster on your desktop using calico network plugin.
 
